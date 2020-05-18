@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="556.0" prefWidth="1030.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MainController">
+    <children>
+        <TableView fx:id="tableEditions" layoutX="411.0" layoutY="10.0" onMouseClicked="#showRow" prefHeight="320.0" prefWidth="598.0">
+            <columns>
+                <TableColumn fx:id="nameColumn" prefWidth="118.0" resizable="false" text="Name" />
+                <TableColumn fx:id="companyColumn" prefWidth="136.0" resizable="false" text="Publishing Company" />
+                <TableColumn fx:id="takeawayColumn" minWidth="0.0" prefWidth="134.0" resizable="false" text="Takeaway Permission" />
+                <TableColumn fx:id="qualityColumn" prefWidth="90.0" resizable="false" text="Quality" />
+            <TableColumn fx:id="dateColumn" prefWidth="118.0" text="Publishing Date" />
+            </columns>
+        </TableView>
+        <Button fx:id="addButton" layoutX="53.0" layoutY="419.0" mnemonicParsing="false" onAction="#createNewRec" prefHeight="18.0" prefWidth="60.0" text="Add" />
+        <Button fx:id="saveButton" layoutX="180.0" layoutY="419.0" mnemonicParsing="false" onAction="#saveNewRec" prefHeight="25.0" prefWidth="60.0" text="Save" />
+        <Button fx:id="deleteButton" layoutX="307.0" layoutY="419.0" mnemonicParsing="false" onAction="#deleteRow" prefHeight="25.0" prefWidth="60.0" text="Delete" />
+      <ComboBox fx:id="classComboBox" layoutX="113.0" layoutY="21.0" onAction="#generateFields" prefHeight="25.0" prefWidth="194.0" />
+      <ComboBox fx:id="qualityComboBox" layoutX="200.0" layoutY="166.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="companyTextField" layoutX="200.0" layoutY="97.0" prefHeight="25.0" prefWidth="182.0" />
+      <TextField fx:id="nameTextField" layoutX="200.0" layoutY="60.0" prefHeight="25.0" prefWidth="182.0" />
+      <CheckBox fx:id="takeawayCheckBox" layoutX="200.0" layoutY="137.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="77.0" />
+      <Label fx:id="nameLabel" layoutX="31.0" layoutY="64.0" prefHeight="17.0" prefWidth="119.0" text="Name" />
+      <Label fx:id="companyLabel" layoutX="31.0" layoutY="101.0" prefHeight="17.0" prefWidth="119.0" text="Publishing Company" />
+      <Label fx:id="takeawayLabel" layoutX="31.0" layoutY="137.0" prefHeight="17.0" prefWidth="119.0" text="Takeaway Permission" />
+      <Label fx:id="qualityLabel" layoutX="31.0" layoutY="170.0" prefHeight="17.0" prefWidth="119.0" text="Quality" />
+      <Separator layoutX="15.0" layoutY="238.0" prefHeight="17.0" prefWidth="371.0" />
+      <Label fx:id="publDateLabel" layoutX="31.0" layoutY="205.0" prefHeight="17.0" prefWidth="119.0" text="Publishing Date" />
+      <DatePicker fx:id="publDatePicker" editable="false" layoutX="200.0" layoutY="201.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label fx:id="ageLabel" layoutX="31.0" layoutY="270.0" prefHeight="17.0" prefWidth="119.0" text="Age Category" visible="false" />
+      <ComboBox fx:id="ageComboBox" layoutX="200.0" layoutY="266.0" prefHeight="25.0" prefWidth="182.0" visible="false" />
+      <Label fx:id="typeLabel" layoutX="31.0" layoutY="270.0" prefHeight="17.0" prefWidth="119.0" text="Newspaper Type" visible="false" />
+      <ComboBox fx:id="typeComboBox" layoutX="200.0" layoutY="266.0" prefHeight="25.0" prefWidth="182.0" visible="false" />
+      <Label fx:id="colorLabel" layoutX="31.0" layoutY="304.0" prefHeight="17.0" prefWidth="119.0" text="Is Colorful" visible="false" />
+      <CheckBox fx:id="colorCheckBox" layoutX="202.0" layoutY="304.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="77.0" visible="false" />
+      <Label fx:id="authorLabel" layoutX="31.0" layoutY="270.0" prefHeight="17.0" prefWidth="119.0" text="Author" visible="false" />
+      <TextField fx:id="authorTextField" layoutX="200.0" layoutY="266.0" prefHeight="25.0" prefWidth="182.0" visible="false" />
+      <Label fx:id="pageNumLabel" layoutX="31.0" layoutY="304.0" prefHeight="17.0" prefWidth="119.0" text="Page Number" visible="false" />
+      <TextField fx:id="pageNumTextField" layoutX="200.0" layoutY="300.0" prefHeight="25.0" prefWidth="60.0" visible="false" />
+      <Label fx:id="rageLabel" layoutX="31.0" layoutY="333.0" prefHeight="17.0" prefWidth="119.0" text="Rage" visible="false" />
+      <TextField fx:id="rageTextField" layoutX="200.0" layoutY="329.0" prefHeight="25.0" prefWidth="60.0" visible="false" />
+      <Label fx:id="sphereLabel" layoutX="31.0" layoutY="364.0" prefHeight="17.0" prefWidth="119.0" text="Sphere" visible="false" />
+      <ComboBox fx:id="sphereComboBox" layoutX="200.0" layoutY="360.0" prefHeight="25.0" prefWidth="182.0" visible="false" />
+      <ComboBox fx:id="genreComboBox" layoutX="200.0" layoutY="360.0" prefHeight="25.0" prefWidth="182.0" visible="false" />
+      <Label fx:id="genreLabel" layoutX="31.0" layoutY="364.0" prefHeight="17.0" prefWidth="119.0" text="Genre" visible="false" />
+      <Button fx:id="serializeButton" layoutX="542.0" layoutY="476.0" mnemonicParsing="false" onAction="#serializeList" prefHeight="25.0" prefWidth="119.0" text="Serialize" />
+      <Button fx:id="deserializeButton" layoutX="731.0" layoutY="476.0" mnemonicParsing="false" onAction="#deserializeList" prefHeight="25.0" prefWidth="119.0" text="Deserialize" />
+      <Separator layoutX="394.0" layoutY="12.0" orientation="VERTICAL" prefHeight="535.0" prefWidth="3.0" />
+      <TextField fx:id="keyTextField" layoutX="700.0" layoutY="403.0" prefHeight="25.0" prefWidth="182.0" />
+      <Label fx:id="keyLabel" layoutX="581.0" layoutY="407.0" prefHeight="17.0" prefWidth="119.0" text="Key" />
+      <Label fx:id="plugLabel" layoutX="581.0" layoutY="364.0" prefHeight="17.0" prefWidth="119.0" text="Plugin" />
+      <ComboBox fx:id="plugComboBox" layoutX="700.0" layoutY="360.0" onMouseClicked="#onClickPlugin" prefHeight="25.0" prefWidth="182.0" />
+    </children>
+</AnchorPane>
